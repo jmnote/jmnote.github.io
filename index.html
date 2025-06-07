@@ -8,7 +8,8 @@
 
   <title>jmnote</title>
   <meta name="description" content="jmnote's github pages">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+    title="docsify-darklight-theme" type="text/css" />
 </head>
 
 <body>
@@ -22,12 +23,16 @@
       loadNavbar: false,
       maxLevel: 0,
       repo: 'https://github.com/jmnote/jmnote.github.io',
-      search: false
+      search: false,
+      darklightTheme: {
+        defaultTheme: 'dark'
+      }
     };
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 </body>
 
 </html>
