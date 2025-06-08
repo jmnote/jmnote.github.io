@@ -6,16 +6,16 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: import('../views/HomeView.vue'),
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/random',
-      name: 'random-tool',
+      name: 'random',
       component: () => import('../views/RandomView.vue'),
     },
     {
       path: '/svg',
-      name: 'svg-tool',
+      name: 'svg',
       component: () => import('../views/SvgView.vue'),
     },
   ],

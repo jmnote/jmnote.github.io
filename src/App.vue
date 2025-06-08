@@ -63,7 +63,7 @@ watch(systemDark, () => {
           <div class="flex items-center bg-gray-100 dark:bg-black rounded-full p-1">
             <button @click="mode = 'system'; applyTheme()" class="p-1.5 rounded-full transition-colors"
               :class="{ 'bg-gray-200 dark:bg-gray-800 border': mode === 'system' }" aria-label="System Theme">
-              <Icon class="w-4 h-4" :path="mdiMonitor" />
+              <BaseIcon class="w-4 h-4" :path="mdiMonitor" />
             </button>
             <button @click="mode = 'light'; applyTheme()" class="p-1.5 rounded-full transition-colors"
               :class="{ 'bg-gray-200 dark:bg-gray-800 border': mode === 'light' }" aria-label="Light Theme">
@@ -77,9 +77,7 @@ watch(systemDark, () => {
 
           <!-- GitHub -->
           <a href="https://github.com/jmnote/jmnote.github.io" target="_blank">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path :d="mdiGithub" />
-            </svg>
+            <BaseIcon class="w-6 h-6" :path="mdiGithub" />
           </a>
         </div>
       </nav>
