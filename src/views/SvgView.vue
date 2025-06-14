@@ -183,8 +183,9 @@ function activateCustomMode() { outputMode.value = 'custom' }
 <template>
   <div class="p-4 max-w-7xl mx-auto text-gray-800 dark:text-gray-100">
     <div class="flex flex-col lg:flex-row items-stretch gap-6 w-full">
+      <!-- Left Section: SVG Input -->
       <section class="flex flex-col flex-1 space-y-4">
-        <h2 class="text-xl font-semibold border-b pb-1">📝 SVG 입력</h2>
+        <h2 class="text-xl font-semibold border-b pb-1">📝 SVG Input</h2>
 
         <textarea v-model="svgSourceText" rows="6"
           class="w-full p-2 border rounded font-mono text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100"
@@ -193,27 +194,27 @@ function activateCustomMode() { outputMode.value = 'custom' }
         <div
           class="border-2 border-dashed rounded p-6 text-center text-gray-500 dark:text-gray-400 dark:border-gray-600"
           @drop="onDrop" @dragover="onDragOver">
-          여기에 SVG 파일을 드래그하세요
+          Drag and drop your SVG file here
         </div>
 
         <input type="file" accept=".svg" @change="onFileChange"
           class="block w-full text-sm file:mr-4 file:px-4 file:py-2 file:border file:rounded file:bg-gray-100 dark:file:bg-gray-700 file:text-sm" />
-
       </section>
 
+      <!-- Right Section: PNG Output -->
       <section class="flex flex-col flex-1 space-y-4">
-        <h2 class="text-xl font-semibold border-b pb-1">📤 PNG 출력</h2>
+        <h2 class="text-xl font-semibold border-b pb-1">📤 PNG Output</h2>
 
         <div class="space-y-2">
           <label class="flex items-center gap-2">
             <input type="radio" v-model="outputMode" value="original" />
-            원본 ({{ originalWidth }}×{{ originalHeight }})
+            Original ({{ originalWidth }}×{{ originalHeight }})
           </label>
 
           <div class="flex items-center gap-4">
             <label class="flex items-center gap-2">
               <input type="radio" v-model="outputMode" value="scale" />
-              스케일
+              Scale
             </label>
             <select @focus="activateScaleMode" v-model.number="scalePercent"
               class="w-24 px-1 py-1 border rounded dark:bg-gray-800 dark:border-gray-600">
@@ -225,7 +226,7 @@ function activateCustomMode() { outputMode.value = 'custom' }
           <div class="flex flex-wrap items-center gap-4">
             <label class="flex items-center gap-2">
               <input type="radio" v-model="outputMode" value="custom" />
-              크기지정
+              Custom size
             </label>
             <div class="flex items-center">
               <input type="number" @focus="activateCustomMode" v-model.number="customWidth" min="1"
@@ -236,13 +237,13 @@ function activateCustomMode() { outputMode.value = 'custom' }
             </div>
             <label class="flex items-center gap-2">
               <input type="checkbox" @focus="activateCustomMode" v-model="keepAspectRatio" />
-              비율 유지
+              Keep aspect ratio
             </label>
-
           </div>
+
           <hr>
           <label class="flex items-center gap-3">
-            <span>🌓 반전</span>
+            <span>🌓 Invert</span>
             <button @click="invertColor = !invertColor" type="button"
               :class="['relative inline-flex items-center h-6 w-11 rounded-full transition-colors focus:outline-none', invertColor ? 'bg-blue-600 dark:bg-blue-400' : 'bg-gray-300 dark:bg-gray-600']">
               <span
@@ -251,10 +252,11 @@ function activateCustomMode() { outputMode.value = 'custom' }
           </label>
         </div>
 
+        <!-- Preview -->
         <div v-if="pngDataUrl">
           <div>
             <div class="flex items-baseline gap-2 mb-1 flex-wrap">
-              <h3 class="font-semibold m-0">📷 미리보기</h3>
+              <h3 class="font-semibold m-0">📷 Preview</h3>
               <button @click="copyImageToClipboard"
                 class="text-xs px-2 py-0.5 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600">
                 {{ copiedClipboard ? '✔ Copied!' : '📋 Copy' }}
@@ -264,7 +266,7 @@ function activateCustomMode() { outputMode.value = 'custom' }
                 {{ copiedDownload ? '✔ Downloaded!' : '⬇ Download' }}
               </button>
               <label class="flex items-center gap-1 text-sm">
-                파일명
+                Filename
                 <input v-model="fileName" type="text" placeholder="converted"
                   class="w-40 px-2 py-1 border rounded dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100" />
               </label>
@@ -275,9 +277,10 @@ function activateCustomMode() { outputMode.value = 'custom' }
           </div>
         </div>
 
+        <!-- <img> Tag -->
         <div v-if="pngDataUrl">
           <div class="flex items-baseline gap-2 mb-1 flex-wrap">
-            <h3 class="font-semibold m-0">🧾 &lt;img&gt; 태그 (Base64)</h3>
+            <h3 class="font-semibold m-0">🧾 &lt;img&gt; Tag (Base64)</h3>
             <button @click="copyImgTag"
               class="text-xs px-2 py-0.5 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600">
               {{ copiedImgTag ? '✔ Copied!' : '📋 Copy' }}
@@ -290,6 +293,7 @@ function activateCustomMode() { outputMode.value = 'custom' }
     </div>
   </div>
 </template>
+
 
 <style>
 .bg-checkerboard {
