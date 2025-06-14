@@ -8,10 +8,11 @@ import {
   mdiHome,
   mdiDice6,
   mdiImageOutline,
-  mdiGithub,
+  mdiCreation,
+  mdiMonitor,
   mdiWhiteBalanceSunny,
   mdiWeatherNight,
-  mdiMonitor,
+  mdiGithub,
 } from '@mdi/js'
 
 const systemDark = usePreferredDark()
@@ -32,6 +33,13 @@ applyTheme()
 watch(systemDark, () => {
   if (mode.value === 'system') applyTheme()
 })
+
+const navItems = [
+  { to: '/', label: 'Jmnote', icon: mdiHome },
+  { to: '/gpt', label: 'GPT', icon: mdiCreation },
+  { to: '/random', label: 'Random', icon: mdiDice6 },
+  { to: '/svg', label: 'SVG', icon: mdiImageOutline },
+]
 </script>
 
 <template>
@@ -40,22 +48,11 @@ watch(systemDark, () => {
       <nav class="max-w-4xl mx-auto flex flex-wrap justify-between items-center">
         <!-- Left Navigation -->
         <div class="flex h-14">
-          <RouterLink to="/" class="flex items-center gap-1 px-5"
-            :class="route.path === '/' ? 'bg-white dark:bg-gray-900' : 'hover:bg-gray-300 hover:dark:bg-gray-700'">
-            <BaseIcon class="w-5 h-5" :path="mdiHome" />
-            Jmnote
-          </RouterLink>
-
-          <RouterLink to="/random" class="flex items-center gap-1 px-5"
-            :class="route.path === '/random' ? 'bg-white dark:bg-gray-900' : 'hover:bg-gray-300 hover:dark:bg-gray-700'">
-            <BaseIcon class="w-5 h-5" :path="mdiDice6" />
-            Random
-          </RouterLink>
-
-          <RouterLink to="/svg" class="flex items-center gap-1 px-5"
-            :class="route.path === '/svg' ? 'bg-white dark:bg-gray-900' : 'hover:bg-gray-300 hover:dark:bg-gray-700'">
-            <BaseIcon class="w-5 h-5" :path="mdiImageOutline" />
-            SVG
+          <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" class="flex items-center gap-1 px-5" :class="route.path === item.to
+            ? 'bg-white dark:bg-gray-900'
+            : 'hover:bg-gray-300 hover:dark:bg-gray-700'">
+            <BaseIcon class="w-5 h-5" :path="item.icon" />
+            {{ item.label }}
           </RouterLink>
         </div>
 
@@ -73,7 +70,7 @@ watch(systemDark, () => {
                 <BaseIcon class="w-4 h-4" :path="mdiWhiteBalanceSunny" />
               </button>
               <button @click="mode = 'dark'; applyTheme()" class="p-1.5 rounded-full transition-colors"
-                :class="{ 'bg-gray-200 dark:bg-gray-800 border-1': mode === 'dark' }" aria-label="Dark Theme">
+                :class="{ 'bg-gray-200 dark:bg-gray-800 border': mode === 'dark' }" aria-label="Dark Theme">
                 <BaseIcon class="w-4 h-4" :path="mdiWeatherNight" />
               </button>
             </div>
