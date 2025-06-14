@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/gpt',
       name: 'gpt',
-      component: () => import('../views/GptView.vue'),
+      component: () => import('../views/gpt/GptView.vue'),
     },
     {
       path: '/svg',
