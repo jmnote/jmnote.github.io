@@ -1,3 +1,4 @@
+// index.ts
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -9,14 +10,19 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
     },
     {
-      path: '/random',
-      name: 'random',
-      component: () => import('../views/RandomView.vue'),
+      path: '/gpt',
+      name: 'gpt',
+      component: () => import('../views/GptView.vue'),
     },
     {
       path: '/svg',
       name: 'svg',
       component: () => import('../views/SvgView.vue'),
+    },
+    {
+      path: '/random',
+      name: 'random',
+      component: () => import('../views/RandomView.vue'),
     },
   ],
 })
