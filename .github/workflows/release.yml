@@ -29,7 +29,7 @@ jobs:
       - run: npm run build
 
       - name: Detect and Tag Release
-        id: set-output
+        id: release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -46,16 +46,16 @@ jobs:
 
           if git rev-parse "$TAG" >/dev/null 2>&1; then
             echo "⚠️ Tag $TAG already exists."
-            echo "is_new_tag=false" >> "$GITHUB_OUTPUT"
+            echo "is_new_tag=false" >> $GITHUB_OUTPUT
           else
             git tag "$TAG"
             git push origin "$TAG"
             gh release create "$TAG" --generate-notes
-            echo "is_new_tag=true" >> "$GITHUB_OUTPUT"
+            echo "is_new_tag=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Deploy to GitHub Pages
-        if: steps.set-output.outputs.is_new_tag == 'true'
+        if: steps.release.outputs.is_new_tag == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
