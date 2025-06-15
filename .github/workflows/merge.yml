@@ -1,5 +1,5 @@
-# release.yml
-name: Create Release from Version Change
+# merge.yml
+name: Release on Merge to Main
 
 on:
   push:
@@ -26,7 +26,12 @@ jobs:
       - run: npm run test:unit
       - run: npm run build
 
+      - name: Setup Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Run release-it
-        run: npx release-it --ci --github.release
+        run: npx release-it --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
