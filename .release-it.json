@@ -1,7 +1,9 @@
 {
   "git": {
     "tagName": "v${version}",
-    "commitMessage": "release v${version}"
+    "commitMessage": "release v${version}",
+    "push": true,
+    "pushArgs": "--follow-tags"
   },
   "github": {
     "release": true,
