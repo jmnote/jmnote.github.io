@@ -1,12 +1,10 @@
-[![jmnote's profile image](https://github.com/jmnote.png?size=120)](https://github.com/jmnote)
+[![jmnote's profile image](https://github.com/jmnote.png?size=80)](https://github.com/jmnote)
 
 # Hi, I'm Jmnote
 
 A developer and open source contributor.  
 I enjoy building lightweight tools and documenting what I learn.
 
-
----
 
 ## Featured Repositories
 
