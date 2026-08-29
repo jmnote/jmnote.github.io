@@ -5,6 +5,7 @@
   --background: #091a28;
   --text-color: #b4b4b4;
   --border-color: #0d2538;
+  --row-border-color: rgba(180, 180, 180, 0.28);
   --code-background: #0e2233;
   --content-width: 900px;
   color-scheme: dark;
@@ -14,6 +15,7 @@
   --background: #fff;
   --text-color: #34495e;
   --border-color: rgba(0, 0, 0, 0.12);
+  --row-border-color: rgba(0, 0, 0, 0.18);
   --code-background: #f8f8f8;
   color-scheme: light;
 }
@@ -178,7 +180,7 @@ a:hover {
 }
 
 .markdown-section td {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--row-border-color);
 }
 
 .markdown-section thead tr {
@@ -226,7 +228,7 @@ a:hover {
 
   .markdown-section tbody tr {
     padding: 0.75rem 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--row-border-color);
   }
 
   .markdown-section tbody tr:first-child {
