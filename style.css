@@ -175,7 +175,7 @@ a:hover {
 }
 
 .markdown-section th {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--row-border-color);
 }
 
 .markdown-section td {
@@ -183,7 +183,7 @@ a:hover {
 }
 
 .markdown-section thead tr {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--row-border-color);
 }
 
 .markdown-section tbody tr:nth-child(even) td {
