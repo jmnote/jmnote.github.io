@@ -2,15 +2,15 @@
 
 set -euo pipefail
 
-page="_home.md"
+page="index.html"
 
 check_group() {
   local group="$1"
   local next_group="$2"
   local actual expected
 
-  actual=$(sed -n "/^### \[$group\]/,/^### \[$next_group\]/p" "$page" \
-    | sed -n 's/^| \[\([^]]*\)\].*/\1/p')
+  actual=$(sed -n "/<h3><a href=\"https:\\/\\/github.com\\/$group\">/,/<h3><a href=\"https:\\/\\/github.com\\/$next_group\">/p" "$page" \
+    | sed -n 's/.*<tr><td><a href="[^"]*">\([^<]*\)<\/a><\/td>.*/\1/p')
   expected=$(printf '%s\n' "$actual" | LC_ALL=C sort -f)
 
   if [[ "$actual" != "$expected" ]]; then
@@ -22,8 +22,8 @@ check_group() {
 
 check_group 'jmnote' 'mailapi'
 
-actual=$(sed -n '/^### \[mailapi\]/,$p' "$page" \
-  | sed -n 's/^| \[\([^]]*\)\].*/\1/p')
+actual=$(sed -n '/<h3><a href="https:\/\/github.com\/mailapi">/,$p' "$page" \
+  | sed -n 's/.*<tr><td><a href="[^"]*">\([^<]*\)<\/a><\/td>.*/\1/p')
 expected=$(printf '%s\n' "$actual" | LC_ALL=C sort -f)
 
 if [[ "$actual" != "$expected" ]]; then
@@ -32,4 +32,4 @@ if [[ "$actual" != "$expected" ]]; then
   exit 1
 fi
 
-echo 'Project order is valid.'
+echo 'Repo order is valid.'

@@ -20,6 +20,24 @@ jobs:
         with:
           globs: '**/*.md'
 
+  html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check HTML
+        run: npx --yes html-validate index.html
+
+  css:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check CSS
+        run: npx --yes stylelint 'assets/**/*.css'
+
   links:
     runs-on: ubuntu-latest
     steps:
@@ -29,14 +47,14 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress '_home.md' 'README.md'
+          args: --verbose --no-progress 'index.html' 'README.md'
           fail: true
 
-  project-order:
+  repo-order:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check project order
-        run: ./scripts/check-project-order.sh
+      - name: Check Repo order
+        run: ./scripts/check-repo-order.sh
