@@ -178,6 +178,10 @@ a:hover {
   border-bottom: 1px solid var(--border-color);
 }
 
+.markdown-section tbody tr:nth-child(even) td {
+  background: var(--code-background);
+}
+
 .markdown-section th:first-child,
 .markdown-section td:first-child {
   width: 25%;
