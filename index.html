@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jmnote</title>
   <meta name="description" content="Jmnote — cloud and software engineer building lightweight tools and documenting what I learn.">
   <meta property="og:type" content="website">
@@ -12,26 +12,56 @@
   <meta property="og:image" content="https://github.com/jmnote.png?size=512">
   <meta property="og:url" content="https://jmnote.github.io/">
   <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://jmnote.github.io/">
   <link rel="icon" href="https://github.com/jmnote.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@3.2.0/dist/style.min.css">
+  <script>
+    const savedTheme = localStorage.getItem('DARK_LIGHT_THEME');
+    const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = savedTheme || preferredTheme;
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="app">Loading...</div>
+  <button id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"></button>
 
-  <script>
-    window.$docsify = {
-      name: 'Jmnote',
-      repo: 'jmnote/jmnote.github.io',
-      homepage: '_home.md',
-      loadSidebar: false,
-      hideSidebar: true,
-      loadNavbar: false,
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@3.2.0/dist/index.min.js"></script>
+  <main class="markdown-section">
+    <h1>Hi, I'm Jmnote</h1>
+    <p>I’m a cloud and software engineer who enjoys building lightweight tools and documenting what I learn.</p>
+    <p><a href="https://github.com/jmnote"><img src="https://github.com/jmnote.png?size=80" alt="Jmnote's profile image"></a></p>
+
+    <h2>Active repositories</h2>
+
+    <h3><a href="https://github.com/jmnote">jmnote</a></h3>
+    <table>
+      <thead>
+        <tr><th scope="col">Repo</th><th scope="col">Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://github.com/jmnote/aigauge">AI Gauge</a></td><td>Windows system tray widget for monitoring AI service usage.</td></tr>
+        <tr><td><a href="https://github.com/jmnote/black-screen">Black Screen</a></td><td>Chrome extension for opening a pure black screen in a new tab.</td></tr>
+        <tr><td><a href="https://github.com/jmnote/SimpleMaps">SimpleMaps</a></td><td>MediaWiki extension for displaying interactive maps with Leaflet.</td></tr>
+        <tr><td><a href="https://github.com/jmnote/SimpleMarkdown">SimpleMarkdown</a></td><td>MediaWiki extension for rendering Markdown with marked and DOMPurify.</td></tr>
+        <tr><td><a href="https://github.com/jmnote/SimpleMathJax">SimpleMathJax</a></td><td>MediaWiki extension for rendering mathematical notation with MathJax.</td></tr>
+        <tr><td><a href="https://github.com/jmnote/SimpleMermaid">SimpleMermaid</a></td><td>MediaWiki extension for rendering diagrams with Mermaid.</td></tr>
+        <tr><td><a href="https://github.com/jmnote/slides">Slides</a></td><td>Slide decks from conference talks and public presentations.</td></tr>
+      </tbody>
+    </table>
+
+    <h3><a href="https://github.com/mailapi">mailapi</a></h3>
+    <table>
+      <thead>
+        <tr><th scope="col">Repo</th><th scope="col">Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://github.com/mailapi/mailapi">Mail API</a></td><td>Vendor-neutral API specification for sending and receiving email.</td></tr>
+        <tr><td><a href="https://github.com/mailapi/mediawiki-extensions-MailAPI">MailAPI MediaWiki Extension</a></td><td>MediaWiki integration for the Mail API.</td></tr>
+        <tr><td><a href="https://github.com/mailapi/resend-mailer">Resend Mailer</a></td><td>Receives Mail API message requests and forwards them to Resend.</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="theme.js"></script>
 </body>
 
 </html>
