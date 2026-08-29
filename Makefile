@@ -1,5 +1,5 @@
 install:
-	npm install -g docsify-cli
+	gem install jekyll bundler
 
 serve:
-	docsify serve .
+	jekyll serve --livereload

@@ -1,31 +1,32 @@
 # jmnote.github.io
 
 Source repository for [jmnote.github.io](https://jmnote.github.io), a small
-Docsify-powered profile page hosted on GitHub Pages.
+Jekyll-powered profile page hosted on GitHub Pages.
 
-The page content lives in [`_home.md`](_home.md). This README is intended for
+The page content lives in [`index.md`](index.md). This README is intended for
 people working on or deploying the repository.
 
 ## Run locally
 
-The page is served with [Docsify](https://docsify.js.org/). Install the
-dependencies and start a local server with:
+The page is built with [Jekyll](https://jekyllrb.com/). Install Ruby, then
+install Jekyll and start a local server with:
 
 ```sh
 make install
 make serve
 ```
 
-Then open the URL printed by Docsify, usually `http://localhost:3000`.
+Then open the URL printed by Jekyll, usually `http://localhost:4000`.
 
 ## Repository structure
 
 ```text
 .
 ├── .github/workflows/ci.yml # PR validation workflow
-├── index.html   # Docsify configuration and page shell
+├── _config.yml  # Jekyll configuration
+├── _layouts/    # Shared HTML layouts
+├── index.md     # Profile page content
 ├── style.css    # Table and responsive styles
-├── _home.md     # Profile page content
 ├── scripts/      # Repository validation scripts
 ├── README.md    # Repository documentation
 ├── Makefile     # Local installation and preview commands
@@ -34,7 +35,8 @@ Then open the URL printed by Docsify, usually `http://localhost:3000`.
 
 ## Deployment
 
-Push changes to the repository and publish the site through GitHub Pages.
+Push changes to the repository and publish the site through GitHub Pages using
+the `main` branch root as the publishing source.
 The live page is available at [jmnote.github.io](https://jmnote.github.io).
 
 ## Continuous integration

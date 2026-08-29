@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-page="_home.md"
+page="index.md"
 
 check_group() {
   local group="$1"

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Hi, I'm Jmnote
 
 I’m a cloud and software engineer who enjoys building lightweight tools and

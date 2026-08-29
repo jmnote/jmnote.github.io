@@ -1,81 +1,157 @@
 :root {
-  --project-line: var(--border-color, rgba(127, 127, 127, 0.15));
+  --page-bg: #fff;
+  --text: #202124;
+  --muted: #5f6368;
+  --line: #dadce0;
+  --accent: #635bff;
 }
 
-.markdown-section {
-  max-width: 900px;
+* {
+  box-sizing: border-box;
 }
 
-.markdown-section table {
-  display: table;
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.site-header,
+.site-main {
+  width: min(900px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header a,
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-main {
+  padding: 4rem 0 6rem;
+}
+
+.site-main > p:first-of-type {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.site-main > p:nth-of-type(2) img {
+  width: 72px;
+  height: 72px;
+  margin-top: 0.5rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(63, 57, 170, 0.14);
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
-.markdown-section table th,
-.markdown-section table td {
+th,
+td {
+  padding: 0.7rem 0.8rem;
   border-left: 0;
   border-right: 0;
+  text-align: left;
   vertical-align: top;
 }
 
-.markdown-section table th {
-  border-bottom: 2px solid var(--border-color, rgba(127, 127, 127, 0.25));
-  color: var(--text-color, inherit);
+th:first-child,
+td:first-child {
+  width: 30%;
 }
 
-.markdown-section table td {
-  border-bottom: 1px solid var(--project-line);
+th:last-child,
+td:last-child {
+  width: 70%;
 }
 
-.markdown-section table th:first-child,
-.markdown-section table td:first-child {
-  width: 25%;
+th {
+  border-bottom: 2px solid var(--line);
+  color: var(--muted);
 }
 
-.markdown-section table th:last-child,
-.markdown-section table td:last-child {
-  width: 75%;
+td {
+  border-bottom: 1px solid var(--line);
 }
 
-.markdown-section table tbody tr:hover td {
-  background: var(--code-block-bg, rgba(127, 127, 127, 0.06));
+tr:hover td {
+  background: rgba(99, 91, 255, 0.04);
 }
 
 @media (max-width: 640px) {
-  .markdown-section table {
-    display: block;
-    table-layout: auto;
-    border: 0;
+  .site-main {
+    padding: 2.5rem 0 4rem;
   }
 
-  .markdown-section table thead {
+  table {
+    display: block;
+    table-layout: auto;
+  }
+
+  thead {
     display: none;
   }
 
-  .markdown-section table tbody tr {
+  tbody tr {
     display: block;
     padding: 0.75rem 0;
-    border-top: 1px solid var(--project-line) !important;
+    border-top: 1px solid var(--line);
   }
 
-  .markdown-section table tbody tr:first-child {
-    border-top: 0 !important;
+  tbody tr:first-child {
+    border-top: 0;
   }
 
-  .markdown-section table tbody td {
+  tbody td {
     display: block;
     width: 100% !important;
     padding: 0.2rem 0;
-    border: 0 !important;
+    border: 0;
   }
 
-  .markdown-section table tbody tr:hover td {
-    background: transparent;
-  }
-
-  .markdown-section table tbody td:first-child {
+  tbody td:first-child {
     font-weight: 600;
+  }
+
+  tbody tr:hover td {
+    background: transparent;
   }
 }

@@ -1,5 +1,5 @@
-# Local dependencies and generated build artifacts
 node_modules/
-.astro/
-.vitepress/
-dist/
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
