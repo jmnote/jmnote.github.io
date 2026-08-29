@@ -1,5 +1,11 @@
-install:
-	@echo "No dependencies to install."
+.PHONY: checks serve
+
+checks:
+	./scripts/check-project-order.sh
+	npx --yes markdownlint-cli2 '**/*.md'
+	npx --yes html-validate index.html
+	docker run --rm -v "$(CURDIR):/input:ro" lycheeverse/lychee:latest \
+		--verbose --no-progress /input/index.html /input/README.md
 
 serve:
 	npx --yes live-server . --host=127.0.0.1 --port=3000

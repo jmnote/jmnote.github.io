@@ -9,11 +9,16 @@ for people working on or deploying the repository.
 ## Run locally
 
 The page is plain HTML and CSS, with a small JavaScript file for theme
-switching. Node.js and npm are only used by the local live-reload server; no
-packages are added to the repository. To start it:
+switching. Run the project-order, Markdown, HTML, and link checks locally
+with:
 
 ```sh
-make install
+make checks
+```
+
+To start a local server with live reload:
+
+```sh
 make serve
 ```
 
@@ -28,7 +33,7 @@ Then open `http://localhost:3000`.
 ├── assets/      # CSS, JavaScript, and SVG assets
 ├── scripts/     # Repository validation scripts
 ├── README.md    # Repository documentation
-├── Makefile     # Local preview commands
+├── Makefile     # Local checks and preview commands
 └── LICENSE      # Apache License 2.0
 ```
 
@@ -39,9 +44,9 @@ The live page is available at [jmnote.github.io](https://jmnote.github.io).
 
 ## Continuous integration
 
-Pull requests are checked for valid links, Markdown style, and alphabetical
-project ordering. Run `./scripts/check-project-order.sh` locally to verify the
-project list.
+Pull requests are checked for valid links, HTML and Markdown style, and
+alphabetical project ordering. Run `make checks` locally to run the same
+checks.
 
 ## License
 

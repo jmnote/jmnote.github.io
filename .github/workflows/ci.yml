@@ -20,6 +20,15 @@ jobs:
         with:
           globs: '**/*.md'
 
+  html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check HTML
+        run: npx --yes html-validate index.html
+
   links:
     runs-on: ubuntu-latest
     steps:
