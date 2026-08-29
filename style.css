@@ -121,7 +121,7 @@ a:hover {
   position: relative;
   width: min(var(--content-width), 90%);
   margin: 0 auto;
-  padding: 90px 15px 40px;
+  padding: 90px 15px;
   line-height: 1.6;
 }
 
@@ -207,7 +207,7 @@ a:hover {
 @media (max-width: 640px) {
   .markdown-section {
     width: 100%;
-    padding: 50px 15px 40px;
+    padding: 50px 15px;
   }
 
   .markdown-section table,
