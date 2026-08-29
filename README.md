@@ -1,34 +1,34 @@
 # jmnote.github.io
 
 Source repository for [jmnote.github.io](https://jmnote.github.io), a small
-Docsify-powered profile page hosted on GitHub Pages.
+static profile page hosted on GitHub Pages.
 
-The page content lives in [`_home.md`](_home.md). This README is intended for
-people working on or deploying the repository.
+The page content lives in [`index.html`](index.html). This README is intended
+for people working on or deploying the repository.
 
 ## Run locally
 
-The page is served with [Docsify](https://docsify.js.org/). Install the
-dependencies and start a local server with:
+The page is plain HTML and CSS, with a small JavaScript file for theme
+switching. No project dependencies are required. To start a local server:
 
 ```sh
 make install
 make serve
 ```
 
-Then open the URL printed by Docsify, usually `http://localhost:3000`.
+Then open `http://localhost:3000`.
 
 ## Repository structure
 
 ```text
 .
 ├── .github/workflows/ci.yml # PR validation workflow
-├── index.html   # Docsify configuration and page shell
-├── style.css    # Table and responsive styles
-├── _home.md     # Profile page content
-├── scripts/      # Repository validation scripts
+├── index.html   # Profile page content and metadata
+├── style.css    # Page and responsive styles
+├── theme.js     # Light/dark theme switching
+├── scripts/     # Repository validation scripts
 ├── README.md    # Repository documentation
-├── Makefile     # Local installation and preview commands
+├── Makefile     # Local preview commands
 └── LICENSE      # Apache License 2.0
 ```
 
