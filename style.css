@@ -7,7 +7,6 @@
   --border-color: #0d2538;
   --code-background: #0e2233;
   --content-width: 900px;
-  --theme-icon: url("assets/sun.svg");
   color-scheme: dark;
 }
 
@@ -16,7 +15,6 @@
   --text-color: #34495e;
   --border-color: rgba(0, 0, 0, 0.12);
   --code-background: #f8f8f8;
-  --theme-icon: url("assets/moon.svg");
   color-scheme: light;
 }
 
@@ -64,6 +62,12 @@ a:hover {
   cursor: pointer;
 }
 
+#theme-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
 .github-corner {
   position: fixed;
   top: 0;
@@ -95,7 +99,6 @@ a:hover {
 #theme-toggle {
   border: 0;
   appearance: none;
-  background: var(--theme-icon) center / 25px 25px no-repeat;
 }
 
 #theme-toggle:focus-visible,
@@ -176,6 +179,10 @@ a:hover {
 
 .markdown-section td {
   border-bottom: 1px solid var(--border-color);
+}
+
+.markdown-section thead tr {
+  border-top: 1px solid var(--border-color);
 }
 
 .markdown-section tbody tr:nth-child(even) td {
