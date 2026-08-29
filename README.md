@@ -1,16 +1,48 @@
-[![jmnote's profile image](https://github.com/jmnote.png?size=80)](https://github.com/jmnote)
+# jmnote.github.io
 
-# Hi, I'm Jmnote
+Source repository for [jmnote.github.io](https://jmnote.github.io), a small
+Docsify-powered profile page hosted on GitHub Pages.
 
-A developer and open source contributor.  
-I enjoy building lightweight tools and documenting what I learn.
+The page content lives in [`_home.md`](_home.md). This README is intended for
+people working on or deploying the repository.
 
+## Run locally
 
-## Featured Repositories
+The page is served with [Docsify](https://docsify.js.org/). Install the
+dependencies and start a local server with:
 
-| Project | Description |
-|--------|-------------|
-| 🧱 [black-screen](https://github.com/jmnote/black-screen) | A Chrome extension that opens a pure black screen in a new tab. |
-| 🖱️ [mouse-gesture](https://github.com/jmnote/mouse-gesture) | Enables navigation using right-click mouse gestures. |
-| 🎤 [slides](https://github.com/jmnote/slides) | Slide decks from conference talks and public presentations. |
-| 📦 [helm-charts](https://github.com/kuoss/helm-charts) | Helm charts for deploying OSS to Kubernetes. |
+```sh
+make install
+make serve
+```
+
+Then open the URL printed by Docsify, usually [`http://localhost:3000`](http://localhost:3000).
+
+## Repository structure
+
+```text
+.
+├── .github/workflows/ci.yml # PR validation workflow
+├── index.html   # Docsify configuration and page shell
+├── style.css    # Table and responsive styles
+├── _home.md     # Profile page content
+├── scripts/      # Repository validation scripts
+├── README.md    # Repository documentation
+├── Makefile     # Local installation and preview commands
+└── LICENSE      # Apache License 2.0
+```
+
+## Deployment
+
+Push changes to the repository and publish the site through GitHub Pages.
+The live page is available at [jmnote.github.io](https://jmnote.github.io).
+
+## Continuous integration
+
+Pull requests are checked for valid links, Markdown style, and alphabetical
+project ordering. Run `./scripts/check-project-order.sh` locally to verify the
+project list.
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
