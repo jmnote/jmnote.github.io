@@ -84,9 +84,7 @@ a:hover {
 #theme-toggle {
   border: 0;
   appearance: none;
-  background: currentColor;
-  -webkit-mask: var(--theme-icon) center / 25px 25px no-repeat;
-  mask: var(--theme-icon) center / 25px 25px no-repeat;
+  background: var(--theme-icon) center / 25px 25px no-repeat;
 }
 
 #theme-toggle:focus-visible,
