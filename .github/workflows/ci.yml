@@ -29,6 +29,15 @@ jobs:
       - name: Check HTML
         run: npx --yes html-validate index.html
 
+  css:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check CSS
+        run: npx --yes stylelint 'assets/**/*.css'
+
   links:
     runs-on: ubuntu-latest
     steps:

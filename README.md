@@ -33,6 +33,7 @@ Then open `http://localhost:3000`.
 ├── assets/      # CSS, JavaScript, and SVG assets
 ├── scripts/     # Repository validation scripts
 ├── README.md    # Repository documentation
+├── .stylelintrc.json # CSS validation rules
 ├── Makefile     # Local checks and preview commands
 └── LICENSE      # Apache License 2.0
 ```
@@ -44,9 +45,8 @@ The live page is available at [jmnote.github.io](https://jmnote.github.io).
 
 ## Continuous integration
 
-Pull requests are checked for valid links, HTML and Markdown style, and
-alphabetical Repo ordering. Run `make checks` locally to run the same
-checks.
+Pull requests are checked for valid links, HTML, CSS, and Markdown style, and
+alphabetical Repo ordering. Run `make checks` locally to run the same checks.
 
 ## License
 
