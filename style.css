@@ -7,7 +7,7 @@
   --border-color: #0d2538;
   --code-background: #0e2233;
   --content-width: 900px;
-  --theme-icon: url("assets/light.svg");
+  --theme-icon: url("assets/sun.svg");
   color-scheme: dark;
 }
 
@@ -16,7 +16,7 @@
   --text-color: #34495e;
   --border-color: rgba(0, 0, 0, 0.12);
   --code-background: #f8f8f8;
-  --theme-icon: url("assets/dark.svg");
+  --theme-icon: url("assets/moon.svg");
   color-scheme: light;
 }
 
