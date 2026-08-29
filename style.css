@@ -63,8 +63,7 @@ a:hover {
   height: 100%;
 }
 
-#theme-toggle,
-.github-link {
+#theme-toggle {
   display: block;
   width: 25px;
   height: 25px;
@@ -75,10 +74,32 @@ a:hover {
   cursor: pointer;
 }
 
-.github-link {
-  background: currentColor;
-  -webkit-mask: url("assets/github.svg") center / 20px 20px no-repeat;
-  mask: url("assets/github.svg") center / 20px 20px no-repeat;
+.github-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+.github-corner svg {
+  display: block;
+  width: 70px;
+  height: 70px;
+  fill: var(--accent);
+}
+
+.github-corner .octo-arm,
+.github-corner .octo-body {
+  fill: currentColor;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 0.56s ease-in-out;
 }
 
 #theme-toggle {
@@ -88,9 +109,18 @@ a:hover {
 }
 
 #theme-toggle:focus-visible,
-.github-link:focus-visible {
+.github-corner:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% { transform: rotate(0); }
+  20%,
+  60% { transform: rotate(-25deg); }
+  40%,
+  80% { transform: rotate(10deg); }
 }
 
 .markdown-section {
