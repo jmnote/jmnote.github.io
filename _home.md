@@ -1,6 +1,6 @@
-[![jmnote's profile image](https://github.com/jmnote.png?size=80)](https://github.com/jmnote)
-
 # Hi, I'm Jmnote
+
+[![jmnote's profile image](https://github.com/jmnote.png?size=80)](https://github.com/jmnote)
 
 I’m a cloud and software engineer who enjoys building lightweight tools and
 documenting what I learn.
