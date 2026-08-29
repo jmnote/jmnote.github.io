@@ -1,4 +1,6 @@
-# Hi, I'm Jmnote
+# Jmnote
+
+## Hi, I'm Jmnote
 
 [![jmnote's profile image](https://github.com/jmnote.png?size=80)](https://github.com/jmnote)
 
