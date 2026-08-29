@@ -75,7 +75,10 @@ a:hover {
   top: 15px;
   right: 10px;
   border: 0;
-  background: var(--theme-icon) center / 25px 25px no-repeat;
+  appearance: none;
+  background: currentColor;
+  -webkit-mask: var(--theme-icon) center / 25px 25px no-repeat;
+  mask: var(--theme-icon) center / 25px 25px no-repeat;
 }
 
 #theme-toggle:focus-visible,
