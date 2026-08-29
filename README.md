@@ -16,7 +16,7 @@ make install
 make serve
 ```
 
-Then open the URL printed by Docsify, usually [`http://localhost:3000`](http://localhost:3000).
+Then open the URL printed by Docsify, usually `http://localhost:3000`.
 
 ## Repository structure
 
