@@ -1,7 +1,7 @@
 .PHONY: checks serve
 
 checks:
-	./scripts/check-project-order.sh
+	./scripts/check-repo-order.sh
 	npx --yes markdownlint-cli2 '**/*.md'
 	npx --yes html-validate index.html
 	docker run --rm -v "$(CURDIR):/input:ro" lycheeverse/lychee:latest \

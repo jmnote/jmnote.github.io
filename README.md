@@ -9,7 +9,7 @@ for people working on or deploying the repository.
 ## Run locally
 
 The page is plain HTML and CSS, with a small JavaScript file for theme
-switching. Run the project-order, Markdown, HTML, and link checks locally
+switching. Run the repo-order, Markdown, HTML, and link checks locally
 with:
 
 ```sh
@@ -45,7 +45,7 @@ The live page is available at [jmnote.github.io](https://jmnote.github.io).
 ## Continuous integration
 
 Pull requests are checked for valid links, HTML and Markdown style, and
-alphabetical project ordering. Run `make checks` locally to run the same
+alphabetical Repo ordering. Run `make checks` locally to run the same
 checks.
 
 ## License

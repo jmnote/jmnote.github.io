@@ -32,4 +32,4 @@ if [[ "$actual" != "$expected" ]]; then
   exit 1
 fi
 
-echo 'Project order is valid.'
+echo 'Repo order is valid.'
