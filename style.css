@@ -206,7 +206,9 @@ a:hover {
 
 @media (max-width: 640px) {
   #theme-toggle {
-    top: 35px;
+    top: 15px;
+    right: auto;
+    left: 10px;
   }
 
   .markdown-section {
