@@ -1,4 +1,5 @@
 (() => {
+  // Keep theme behavior independent from the page markup.
   const root = document.documentElement;
   const toggle = document.getElementById('theme-toggle');
   const icon = document.getElementById('theme-icon');

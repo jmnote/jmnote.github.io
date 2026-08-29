@@ -25,9 +25,7 @@ Then open `http://localhost:3000`.
 .
 ├── .github/workflows/ci.yml # PR validation workflow
 ├── index.html   # Profile page content and metadata
-├── style.css    # Page and responsive styles
-├── theme.js     # Light/dark theme switching
-├── assets/      # SVG icons
+├── assets/      # CSS, JavaScript, and SVG assets
 ├── scripts/     # Repository validation scripts
 ├── README.md    # Repository documentation
 ├── Makefile     # Local preview commands

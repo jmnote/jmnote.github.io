@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans&Source+Sans+Pro&Roboto+Mono&display=swap");
 
+/* Page and responsive styles. */
+
 :root {
   --accent: #42b983;
   --background: #091a28;
