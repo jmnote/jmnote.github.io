@@ -9,7 +9,8 @@ for people working on or deploying the repository.
 ## Run locally
 
 The page is plain HTML and CSS, with a small JavaScript file for theme
-switching. No project dependencies are required. To start a local server:
+switching. Node.js and npm are only used by the local live-reload server; no
+packages are added to the repository. To start it:
 
 ```sh
 make install
