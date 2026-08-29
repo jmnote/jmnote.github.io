@@ -50,10 +50,22 @@ a:hover {
   text-decoration: underline;
 }
 
+.topbar {
+  height: 48px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+}
+
 #theme-toggle,
 .github-link {
-  position: fixed;
-  z-index: 1;
+  display: block;
   width: 25px;
   height: 25px;
   padding: 0;
@@ -64,16 +76,12 @@ a:hover {
 }
 
 .github-link {
-  top: 15px;
-  right: 50px;
   background: currentColor;
   -webkit-mask: url("assets/github.svg") center / 20px 20px no-repeat;
   mask: url("assets/github.svg") center / 20px 20px no-repeat;
 }
 
 #theme-toggle {
-  top: 15px;
-  right: 10px;
   border: 0;
   appearance: none;
   background: currentColor;
@@ -166,14 +174,6 @@ a:hover {
 }
 
 @media (max-width: 640px) {
-  #theme-toggle,
-  .github-link {
-    top: 15px;
-  }
-
-  #theme-toggle { right: 10px; }
-  .github-link { right: 50px; }
-
   .markdown-section {
     width: 100%;
     padding: 30px 15px 40px;
