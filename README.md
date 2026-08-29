@@ -8,22 +8,15 @@ people working on or deploying the repository.
 
 ## Run locally
 
-The page is built with [Jekyll](https://jekyllrb.com/). On Ubuntu or WSL,
-install Ruby and its build dependencies first:
-
-```sh
-sudo apt-get update
-sudo apt-get install ruby-full build-essential zlib1g-dev
-```
-
-Then install Jekyll and start a local server with:
+The page is built with [Jekyll](https://jekyllrb.com/) and runs locally in
+Docker. Start the image and local server with:
 
 ```sh
 make install
 make serve
 ```
 
-Then open the URL printed by Jekyll, usually `http://localhost:4000`.
+Then open `http://localhost:4000`.
 
 ## Repository structure
 
