@@ -5,7 +5,7 @@ documenting what I learn.
 
 [![jmnote's profile image](https://github.com/jmnote.png?size=80)](https://github.com/jmnote)
 
-## Projects
+## Active repositories
 
 ### [jmnote](https://github.com/jmnote)
 
