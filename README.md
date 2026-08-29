@@ -26,6 +26,7 @@ Then open `http://localhost:3000`.
 ├── index.html   # Profile page content and metadata
 ├── style.css    # Page and responsive styles
 ├── theme.js     # Light/dark theme switching
+├── assets/      # SVG icons
 ├── scripts/     # Repository validation scripts
 ├── README.md    # Repository documentation
 ├── Makefile     # Local preview commands

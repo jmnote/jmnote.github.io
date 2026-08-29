@@ -7,6 +7,7 @@
   --border-color: #0d2538;
   --code-background: #0e2233;
   --content-width: 900px;
+  --theme-icon: url("assets/light.svg");
   color-scheme: dark;
 }
 
@@ -15,6 +16,7 @@
   --text-color: #34495e;
   --border-color: rgba(0, 0, 0, 0.12);
   --code-background: #f8f8f8;
+  --theme-icon: url("assets/dark.svg");
   color-scheme: light;
 }
 
@@ -48,10 +50,9 @@ a:hover {
   text-decoration: underline;
 }
 
-#theme-toggle {
+#theme-toggle,
+.github-link {
   position: fixed;
-  top: 15px;
-  right: 10px;
   z-index: 1;
   width: 25px;
   height: 25px;
@@ -62,13 +63,25 @@ a:hover {
   cursor: pointer;
 }
 
-#theme-toggle::before {
-  content: "☀";
-  font-size: 1.15rem;
+.github-link {
+  top: 15px;
+  right: 50px;
+  background: currentColor;
+  -webkit-mask: url("assets/github.svg") center / 20px 20px no-repeat;
+  mask: url("assets/github.svg") center / 20px 20px no-repeat;
 }
 
-:root[data-theme="light"] #theme-toggle::before {
-  content: "☾";
+#theme-toggle {
+  top: 15px;
+  right: 10px;
+  border: 0;
+  background: var(--theme-icon) center / 25px 25px no-repeat;
+}
+
+#theme-toggle:focus-visible,
+.github-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .markdown-section {
@@ -150,10 +163,13 @@ a:hover {
 }
 
 @media (max-width: 640px) {
-  #theme-toggle {
+  #theme-toggle,
+  .github-link {
     top: 15px;
-    right: 10px;
   }
+
+  #theme-toggle { right: 10px; }
+  .github-link { right: 50px; }
 
   .markdown-section {
     width: 100%;
