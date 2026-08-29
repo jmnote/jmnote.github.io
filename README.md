@@ -34,6 +34,7 @@ Then open `http://localhost:3000`.
 ├── scripts/     # Repository validation scripts
 ├── README.md    # Repository documentation
 ├── .stylelintrc.json # CSS validation rules
+├── package.json  # Release version
 ├── Makefile     # Local checks and preview commands
 └── LICENSE      # Apache License 2.0
 ```
@@ -42,6 +43,12 @@ Then open `http://localhost:3000`.
 
 Push changes to the repository and publish the site through GitHub Pages.
 The live page is available at [jmnote.github.io](https://jmnote.github.io).
+
+## Releases
+
+Update the version in [`package.json`](package.json) when preparing a release.
+Merging that change into `main` creates the corresponding Git tag and GitHub
+Release automatically.
 
 ## Continuous integration
 
