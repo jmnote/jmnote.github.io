@@ -1,0 +1,4 @@
+exclude = [
+  "^file:.*/slides(/ko)?/?$",
+  "^https://jmnote\\.com/.*"
+]

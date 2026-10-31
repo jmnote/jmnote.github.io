@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-page="index.html"
+page="${1:-index.html}"
 
 check_group() {
   local group="$1"
