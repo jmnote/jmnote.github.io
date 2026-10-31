@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jmnote.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmnote.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jmnote.com/ko/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jmnote.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmnote.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmnote.com/slides/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jmnote.com/slides/ko/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jmnote.com/slides/ko/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmnote.com/slides/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/k8s-ai-agent/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2026/2026-10-28-k8s-ai-agent.pdf</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2025/2025-09-16-ingress-annotator.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2025/2025-05-22-helm-chart.pdf</loc>
+    <lastmod>2025-05-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2024/2024-10-12-venti-stack-2.pdf</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2024/2024-09-24-venti-stack.pdf</loc>
+    <lastmod>2024-09-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2023/2023-08-05-go-tests.pdf</loc>
+    <lastmod>2023-08-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmnote.com/slides/2023/2023-07-12-cloud-native.pdf</loc>
+    <lastmod>2023-07-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
